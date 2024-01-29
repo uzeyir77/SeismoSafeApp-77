@@ -13,30 +13,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     let viewModel  = EartquakeViewModel()
     var allAnnotations: [MKAnnotation] = []
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         fetchData()
     }
-    
     func fetchData(){
         viewModel.getLast1HourEarthquakes()
             self.displayEarthquakeOnMap()
     }
     func displayEarthquakeOnMap() {
         mapView.removeAnnotations(allAnnotations)
-        
         let limitedEarthquakes = Array(viewModel.eartquakes.prefix(10))
         for earthquake in limitedEarthquakes {
             guard let coordinates = earthquake.geometry?.coordinates,
                   coordinates.count >= 2 else {
                 continue
             }
-
             let coordinate = CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
             
             if let earthquakeFeature = earthquake as? EarthquakeFeature {
@@ -47,14 +40,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 print("Error: Cannot convert EarthquakeFeature to Earthquake")
             }
         }
-        
         mapView.showAnnotations(allAnnotations, animated: true)
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let earthquakeAnnotation = annotation as? EarthquakeAnnotation else {
             return nil
         }
-
         let identifier = "earthquakePin"
         var annotationView: MKAnnotationView
 
@@ -68,7 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
 
         if earthquakeAnnotation.earthquakeFeature.properties?.mag ?? 0 > 1.0 {
-            annotationView.image = UIImage(named: "alarm_icon")
+            annotationView.image = UIImage(named: "alarm_icon 2")
             startBlinking(for: annotationView)
         } else {
             annotationView.image = UIImage(named: "alarm_icon 2")
@@ -77,9 +68,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
         return annotationView
     }
-    
        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-           
            fetchData()
        }
        func startBlinking(for annotationView: MKAnnotationView) {

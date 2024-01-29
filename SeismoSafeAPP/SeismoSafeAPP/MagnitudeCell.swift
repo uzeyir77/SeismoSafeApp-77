@@ -9,6 +9,14 @@ import UIKit
 
 class MagnitudeCell: UITableViewCell {
 
+   
+    @IBOutlet weak var magnitudeLabel: UILabel!
+    
+    @IBOutlet weak var placeLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

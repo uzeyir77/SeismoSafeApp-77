@@ -7,12 +7,22 @@
 
 import UIKit
 
-class ToDoController: UIViewController {
+class ToDoController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ToDoCollectionViewCell", for: indexPath) as? ToDoCollectionViewCell
+        return cell!
+    }
+    
 
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collectionView.register(UINib(nibName: "ToDoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ToDoCollectionView")
     }
     
 

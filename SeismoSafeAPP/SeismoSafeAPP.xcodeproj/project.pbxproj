@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */; };
+		A65B636B2B684AA8007B47F1 /* ToDoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */; };
+		A65B636C2B684AA8007B47F1 /* ToDoCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */; };
 		A668050C2B5450B4005DA015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050B2B5450B4005DA015 /* AppDelegate.swift */; };
 		A668050E2B5450B4005DA015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050D2B5450B4005DA015 /* SceneDelegate.swift */; };
 		A66805102B5450B4005DA015 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050F2B5450B4005DA015 /* MapViewController.swift */; };
@@ -15,7 +17,7 @@
 		A66805162B5450B4005DA015 /* SeismoSafeAPP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A66805142B5450B4005DA015 /* SeismoSafeAPP.xcdatamodeld */; };
 		A66805182B5450B6005DA015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66805172B5450B6005DA015 /* Assets.xcassets */; };
 		A668051B2B5450B6005DA015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66805192B5450B6005DA015 /* LaunchScreen.storyboard */; };
-		A66805232B548B10005DA015 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66805222B548B10005DA015 /* SecondViewController.swift */; };
+		A66805232B548B10005DA015 /* AllEarthquakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66805222B548B10005DA015 /* AllEarthquakeController.swift */; };
 		A66805252B55A234005DA015 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66805242B55A234005DA015 /* NetworkManager.swift */; };
 		A66805282B55A8C8005DA015 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66805272B55A8C8005DA015 /* MapKit.framework */; };
 		A668052A2B55AE6C005DA015 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66805292B55AE6B005DA015 /* NetworkHelper.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnitudeCell.swift; sourceTree = "<group>"; };
+		A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCollectionView.xib; sourceTree = "<group>"; };
 		A66805082B5450B4005DA015 /* SeismoSafeAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeismoSafeAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A668050B2B5450B4005DA015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A668050D2B5450B4005DA015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +43,7 @@
 		A66805172B5450B6005DA015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A668051A2B5450B6005DA015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A668051C2B5450B6005DA015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A66805222B548B10005DA015 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A66805222B548B10005DA015 /* AllEarthquakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEarthquakeController.swift; sourceTree = "<group>"; };
 		A66805242B55A234005DA015 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A66805272B55A8C8005DA015 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A66805292B55AE6B005DA015 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 				A66805192B5450B6005DA015 /* LaunchScreen.storyboard */,
 				A668051C2B5450B6005DA015 /* Info.plist */,
 				A66805142B5450B4005DA015 /* SeismoSafeAPP.xcdatamodeld */,
-				A66805222B548B10005DA015 /* SecondViewController.swift */,
+				A66805222B548B10005DA015 /* AllEarthquakeController.swift */,
 				A66805242B55A234005DA015 /* NetworkManager.swift */,
 				A66805292B55AE6B005DA015 /* NetworkHelper.swift */,
 				A668052E2B55B169005DA015 /* EarthquakeViewModel.swift */,
@@ -102,6 +106,8 @@
 				A668055E2B57DD7C005DA015 /* EarthquakeDetailViewController.swift */,
 				A66805C02B630174005DA015 /* ToDoController.swift */,
 				A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */,
+				A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */,
+				A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */,
 			);
 			path = SeismoSafeAPP;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65B636C2B684AA8007B47F1 /* ToDoCollectionView.xib in Resources */,
 				A668051B2B5450B6005DA015 /* LaunchScreen.storyboard in Resources */,
 				A66805182B5450B6005DA015 /* Assets.xcassets in Resources */,
 				A66805132B5450B4005DA015 /* Main.storyboard in Resources */,
@@ -195,13 +202,14 @@
 				A668052A2B55AE6C005DA015 /* NetworkHelper.swift in Sources */,
 				A66805252B55A234005DA015 /* NetworkManager.swift in Sources */,
 				A66805352B56D8D2005DA015 /* EarthquakeAnnotation.swift in Sources */,
+				A65B636B2B684AA8007B47F1 /* ToDoCollectionViewCell.swift in Sources */,
 				A66805C12B630174005DA015 /* ToDoController.swift in Sources */,
 				A66805102B5450B4005DA015 /* MapViewController.swift in Sources */,
 				A668055F2B57DD7C005DA015 /* EarthquakeDetailViewController.swift in Sources */,
 				A668050C2B5450B4005DA015 /* AppDelegate.swift in Sources */,
 				A66805332B56C9C8005DA015 /* Endpoints.swift in Sources */,
 				A66805162B5450B4005DA015 /* SeismoSafeAPP.xcdatamodeld in Sources */,
-				A66805232B548B10005DA015 /* SecondViewController.swift in Sources */,
+				A66805232B548B10005DA015 /* AllEarthquakeController.swift in Sources */,
 				A668052F2B55B169005DA015 /* EarthquakeViewModel.swift in Sources */,
 				A66805312B569E73005DA015 /* ModelEarthquake.swift in Sources */,
 				A668050E2B5450B4005DA015 /* SceneDelegate.swift in Sources */,
