@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 class NetworkManager {
+    
     static func request<T: Codable>(model: T.Type,
                                     endpoint: String,
                                     method: HTTPMethod = .get,
@@ -18,14 +19,22 @@ class NetworkManager {
                    method: method,
                    parameters: parameters,
                    encoding: encoding,
-                   headers: NetworkHelper.header).responseDecodable(of: T.self) { response in
+                   headers: HTTPHeaders.default).responseDecodable(of: T.self) { response in
             switch response.result {
             case .success(let data):
                 completion(data, nil)
             case .failure(let error):
-                    if let data = response.data, let errorMessage = String(data: data, encoding: .utf8) {
-                        print("API error : \(errorMessage)")
+                if let data = response.data {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                        if let errorMessage = json?["error"] as? String {
+                            print("API error: \(errorMessage)")
+                        }
+                    } catch {
+                        print("JSON parse hatası: \(error.localizedDescription)")
                     }
+                }
+
                     completion(nil, error.localizedDescription)
                 }
         }

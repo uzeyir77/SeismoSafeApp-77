@@ -24,22 +24,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func fetchData(){
-        viewModel.getlast1HourEarthquakes()
-        DispatchQueue.main.async {
+        viewModel.getLast1HourEarthquakes()
             self.displayEarthquakeOnMap()
-        }
     }
-    
-    func displayEarthquakeOnMap(){
+    func displayEarthquakeOnMap() {
+        mapView.removeAnnotations(allAnnotations)
         
-        
-        let limitedEarthquakes  = Array(viewModel.eartquakes.prefix(10))
-        for eartquake in limitedEarthquakes {
-            let coordinate = CLLocation(latitude: eartquake.coordinates.latitude, longitude: eartquake.coordinates.longitude)
-            let annotation = EarthquakeAnnotation(coordinate: coordinate.coordinate, earthquake: eartquake)
-            mapView.addAnnotation(annotation)
-            allAnnotations.append(annotation)
+        let limitedEarthquakes = Array(viewModel.eartquakes.prefix(10))
+        for earthquake in limitedEarthquakes {
+            guard let coordinates = earthquake.geometry?.coordinates,
+                  coordinates.count >= 2 else {
+                continue
+            }
+
+            let coordinate = CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
+            
+            if let earthquakeFeature = earthquake as? EarthquakeFeature {
+                let annotation = EarthquakeAnnotation(coordinate: coordinate, earthquakeFeature: earthquakeFeature)
+                mapView.addAnnotation(annotation)
+                allAnnotations.append(annotation)
+            } else {
+                print("Error: Cannot convert EarthquakeFeature to Earthquake")
+            }
         }
+        
         mapView.showAnnotations(allAnnotations, animated: true)
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -59,29 +67,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
 
-        if earthquakeAnnotation.earthquake.properties.mag > 1.0 {
+        if earthquakeAnnotation.earthquakeFeature.properties?.mag ?? 0 > 1.0 {
             annotationView.image = UIImage(named: "alarm_icon")
             startBlinking(for: annotationView)
         } else {
-            annotationView.image = UIImage(named: "normal_icon")
+            annotationView.image = UIImage(named: "alarm_icon 2")
             stopBlinking(for: annotationView)
         }
 
         return annotationView
     }
-//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-//           if let annotation = view.annotation as? EarthquakeAnnotation {
-//               let detailViewController = EarthquakeDetailViewController(earthquake: annotation.earthquake)
-//               navigationController?.pushViewController(detailViewController, animated: true)
-//           }
-//       }
-
-      
+    
        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
            
            fetchData()
        }
-
        func startBlinking(for annotationView: MKAnnotationView) {
            let animation = CABasicAnimation(keyPath: "opacity")
            animation.fromValue = 1
@@ -91,7 +91,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
            animation.repeatCount = Float.infinity
            annotationView.layer.add(animation, forKey: "blinking")
        }
-
        func stopBlinking(for annotationView: MKAnnotationView) {
            annotationView.layer.removeAnimation(forKey: "blinking")
        }

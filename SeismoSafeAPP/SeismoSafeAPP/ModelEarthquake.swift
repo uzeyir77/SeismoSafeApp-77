@@ -7,64 +7,46 @@
 
 import Foundation
 
+// MARK: - Earthquake
 struct Earthquake: Codable {
-    struct Metadata: Codable {
-        let generated: Int
-        let url: String
-        let title: String
-        let status: Int
-        let api: String
-        let count: Int
-    }
-    
-    struct Properties: Codable {
-        let mag: Double
-        let place: String
-        let time: Int
-        let updated: Int
-        let url: String
-        let detail: String
-        let status: String
-        let tsunami: Int
-        let sig: Int
-        let net: String
-        let code: String
-        let ids: String
-        let sources: String
-        let types: String
-        let nst: Int?
-        let dmin: Double?
-        let rms: Double
-        let gap: Double?
-        let magType: String
-        let type: String
-        let title: String
-    }
-    
-    struct Geometry: Codable {
-        let type: String
-        let coordinates: [Double]
-    }
-    
-    let type: String
-    let properties: Properties
-    let geometry: Geometry
-    let id: String
+    let features: [EarthquakeFeature]?
+}
 
-    var coordinates: Coordinates {
-        return Coordinates(longitude: geometry.coordinates[0],
-                           latitude: geometry.coordinates[1],
-                           depth: geometry.coordinates[2])
-    }
+// MARK: - EarthquakeFeature
+struct EarthquakeFeature: Codable {
+    let type: String?
+    let properties: Properties?
+    let geometry: Geometry?
+    let id: String?
+}
+
+// MARK: - Geometry
+struct Geometry: Codable {
+    let type: String?
+    let coordinates: [Double]?
+}
+
+// MARK: - Properties
+struct Properties: Codable {
+    let mag: Double?
+    let place: String?
+    let time, updated, tz: Int?
+    let url: String?
+    let detail: String?
+    let felt: Int?
+    let cdi, mmi: Decimal?
+    let alert, status: String?
+    let tsunami, sig: Int?
+    let net, code, ids, sources: String?
+    let types: String?
+    let nst: Int?
+    let dmin, rms: Double?
+    let gap: Int?
+    let magType, type, title: String?
 }
 
 struct Coordinates: Codable {
-    let longitude: Double
-    let latitude: Double
-    let depth: Double
+    let longitude: Double?
+    let latitude: Double?
+    let depth: Double?
 }
-
-
-let eartquake = Earthquake.self
-
-

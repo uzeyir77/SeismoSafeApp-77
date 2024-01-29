@@ -12,7 +12,7 @@ enum Endpoints: String{
     case past1DayEartquakes = "earthquakes/feed/v1.0/summary/all_day.geojson"
     case past1WeekEartquakes = "earthquakes/feed/v1.0/summary/all_week.geojson"
     case past1MonthEartquakes = "uzn"
-    
+    //earthquakes/feed/v1.0/summary/all_hour.geojson
     
 }
 
