@@ -10,6 +10,10 @@
 		A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */; };
 		A65B636B2B684AA8007B47F1 /* ToDoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */; };
 		A65B636C2B684AA8007B47F1 /* ToDoCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */; };
+		A65B63702B6991EA007B47F1 /* todolist.json in Resources */ = {isa = PBXBuildFile; fileRef = A65B636F2B6991EA007B47F1 /* todolist.json */; };
+		A65B63722B699A39007B47F1 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63712B699A39007B47F1 /* ToDoModel.swift */; };
+		A65B63742B699AE3007B47F1 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63732B699AE3007B47F1 /* ToDoViewModel.swift */; };
+		A65B63762B69A4D3007B47F1 /* ToDoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63752B69A4D3007B47F1 /* ToDoDetailsController.swift */; };
 		A668050C2B5450B4005DA015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050B2B5450B4005DA015 /* AppDelegate.swift */; };
 		A668050E2B5450B4005DA015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050D2B5450B4005DA015 /* SceneDelegate.swift */; };
 		A66805102B5450B4005DA015 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050F2B5450B4005DA015 /* MapViewController.swift */; };
@@ -34,6 +38,10 @@
 		A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnitudeCell.swift; sourceTree = "<group>"; };
 		A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCollectionView.xib; sourceTree = "<group>"; };
+		A65B636F2B6991EA007B47F1 /* todolist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todolist.json; sourceTree = "<group>"; };
+		A65B63712B699A39007B47F1 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		A65B63732B699AE3007B47F1 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
+		A65B63752B69A4D3007B47F1 /* ToDoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailsController.swift; sourceTree = "<group>"; };
 		A66805082B5450B4005DA015 /* SeismoSafeAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeismoSafeAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A668050B2B5450B4005DA015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A668050D2B5450B4005DA015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A65B63772B69B3E6007B47F1 /* ToDoPage */ = {
+			isa = PBXGroup;
+			children = (
+				A66805C02B630174005DA015 /* ToDoController.swift */,
+				A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */,
+				A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */,
+				A65B636F2B6991EA007B47F1 /* todolist.json */,
+				A65B63712B699A39007B47F1 /* ToDoModel.swift */,
+				A65B63732B699AE3007B47F1 /* ToDoViewModel.swift */,
+				A65B63752B69A4D3007B47F1 /* ToDoDetailsController.swift */,
+			);
+			path = ToDoPage;
+			sourceTree = "<group>";
+		};
 		A66804FF2B5450B4005DA015 = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +126,8 @@
 				A66805322B56C9C8005DA015 /* Endpoints.swift */,
 				A66805342B56D8D2005DA015 /* EarthquakeAnnotation.swift */,
 				A668055E2B57DD7C005DA015 /* EarthquakeDetailViewController.swift */,
-				A66805C02B630174005DA015 /* ToDoController.swift */,
 				A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */,
-				A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */,
-				A65B636A2B684AA8007B47F1 /* ToDoCollectionView.xib */,
+				A65B63772B69B3E6007B47F1 /* ToDoPage */,
 			);
 			path = SeismoSafeAPP;
 			sourceTree = "<group>";
@@ -187,6 +207,7 @@
 				A65B636C2B684AA8007B47F1 /* ToDoCollectionView.xib in Resources */,
 				A668051B2B5450B6005DA015 /* LaunchScreen.storyboard in Resources */,
 				A66805182B5450B6005DA015 /* Assets.xcassets in Resources */,
+				A65B63702B6991EA007B47F1 /* todolist.json in Resources */,
 				A66805132B5450B4005DA015 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,8 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65B63742B699AE3007B47F1 /* ToDoViewModel.swift in Sources */,
 				A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */,
+				A65B63722B699A39007B47F1 /* ToDoModel.swift in Sources */,
 				A668052A2B55AE6C005DA015 /* NetworkHelper.swift in Sources */,
+				A65B63762B69A4D3007B47F1 /* ToDoDetailsController.swift in Sources */,
 				A66805252B55A234005DA015 /* NetworkManager.swift in Sources */,
 				A66805352B56D8D2005DA015 /* EarthquakeAnnotation.swift in Sources */,
 				A65B636B2B684AA8007B47F1 /* ToDoCollectionViewCell.swift in Sources */,

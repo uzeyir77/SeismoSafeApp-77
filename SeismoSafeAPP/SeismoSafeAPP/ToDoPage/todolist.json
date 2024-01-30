@@ -1,0 +1,101 @@
+
+{
+  "earthquakeSafety": [
+    {
+      "title": "Actions at Home",
+      "subtitle": "Click here to view precautions for actions at home",
+      "precautions": [
+        "Take cover under a sturdy table or desk",
+        "Stay away from windows and heavy furniture",
+        "Secure tall furniture and appliances to walls",
+        "Turn off gas appliances"
+      ],
+      "imageURL": "https://example.com/actions_at_home.jpg"
+    },
+    {
+      "title": "Safe Places in Open Areas",
+      "subtitle": "Click here to view precautions for safe places in open areas",
+      "precautions": [
+        "Move to open areas away from buildings, trees, and streetlights",
+        "Avoid overpasses and bridges",
+        "Protect your head and neck with your arms"
+      ],
+      "imageURL": "https://example.com/safe_places_open_areas.jpg"
+    },
+    {
+      "title": "Safety Measures in Vehicles",
+      "subtitle": "Click here to view precautions for safety measures in vehicles",
+      "precautions": [
+        "Pull over to a safe location away from overpasses, bridges, and buildings",
+        "Stay inside the vehicle until shaking stops",
+        "Avoid stopping under trees, streetlights, and utility wires"
+      ],
+      "imageURL": "https://example.com/safety_measures_vehicles.jpg"
+    },
+    {
+      "title": "First Aid Information",
+      "subtitle": "Click here to view first aid information",
+      "precautions": [
+        "Check for injuries and provide first aid",
+        "If someone is unconscious, call emergency services",
+        "Treat bleeding with direct pressure",
+        "Provide comfort and reassurance"
+      ],
+      "imageURL": "https://example.com/first_aid_information.jpg"
+    },
+    {
+      "title": "Essential Supplies to Keep",
+      "subtitle": "Click here to view the list of essential supplies to keep",
+      "supplies": [
+        "Water (1 gallon per person per day)",
+        "Non-perishable food items",
+        "First aid kit",
+        "Medications",
+        "Flashlight with extra batteries",
+        "Blankets",
+        "Emergency cash",
+        "Personal hygiene items",
+        "Multi-tool or Swiss Army knife",
+        "Duct tape",
+        "Important documents (ID, insurance, etc.) in a waterproof container",
+        "Whistle for signaling",
+        "Portable phone charger",
+        "Extra clothing and sturdy shoes",
+        "N95 masks for dust and debris",
+        "Moist towelettes and garbage bags for sanitation",
+        "Emergency contact list with addresses and phone numbers"
+      ],
+      "imageURL": "https://example.com/essential_supplies.jpg"
+    },
+    {
+      "title": "Emergency Plan",
+      "subtitle": "Click here to view the emergency plan",
+      "plan": "Designate meeting points, establish communication plans, and practice evacuation routes with family members. Conduct regular drills.",
+      "imageURL": "https://example.com/emergency_plan.jpg"
+    },
+    {
+      "title": "Precautions for Pets",
+      "subtitle": "Click here to view precautions for pets",
+      "precautions": [
+        "Prepare an emergency kit for each pet with food, water, and medications",
+        "Identify pet-friendly shelters in advance",
+        "Ensure pets have proper identification",
+        "Include pet toys and comfort items in their emergency kit",
+        "Microchip pets for easy identification"
+      ],
+      "imageURL": "https://example.com/precautions_for_pets.jpg"
+    },
+    {
+      "title": "Electrical and Gas Shutdown Procedures",
+      "subtitle": "Click here to view electrical and gas shutdown procedures",
+      "procedures": [
+        "Turn off gas valves if safe to do so",
+        "Switch off electrical circuit breakers",
+        "Avoid using matches or lighters until gas is confirmed off",
+        "Inspect for gas leaks using a soap and water solution",
+        "Know the location of the main water and gas shutoff valves in your home"
+      ],
+      "imageURL": "https://example.com/electrical_gas_shutdown.jpg"
+    }
+  ]
+}
