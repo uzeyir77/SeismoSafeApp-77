@@ -8,17 +8,16 @@
 
 
 import Foundation
-
-struct EarthquakeSafety: Codable {
+struct SafetyDetail: Codable {
     let title: String
     let subtitle: String?
-    let precautions: [String]?
-    let supplies: [String]?
-    let plan: String?
-    let procedures: [String]?
+    let details: [String]
     let imageURL: String?
 }
 
-struct EarthquakeSafetyData: Codable {
-    let earthquakeSafety: [EarthquakeSafety]
+// EarthquakeSafety model
+struct EarthquakeSafety: Codable {
+    let earthquakeSafety: [SafetyDetail]
 }
+
+

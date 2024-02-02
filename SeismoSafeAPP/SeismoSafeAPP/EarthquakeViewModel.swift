@@ -7,11 +7,13 @@
 
 import Alamofire
 import Foundation
+import MapKit
 
 class EartquakeViewModel  {
     var eartquakes: [EarthquakeFeature] = []
-    
     var coordinates = [Coordinates]()
+    
+    var allAnnotations: [MKAnnotation] = []
     
     var success: (() -> Void)?
     var error: ((String) -> Void)?
@@ -22,7 +24,6 @@ class EartquakeViewModel  {
                 self?.error?(errorMessages)
             } else if let data = data {
                 self?.eartquakes = data.features ?? []
-                
                 self?.coordinates.removeAll()
                 
                 for feature in data.features ?? [] {
@@ -41,7 +42,6 @@ class EartquakeViewModel  {
             } else if let data = data {
                 self?.eartquakes = data.features ?? []
                 self?.coordinates.removeAll()
-                
                 for feature in data.features ?? [] {
                     if let coordinatesList = feature.geometry?.coordinates, coordinatesList.count >= 2 {
                         let magnitude = feature.properties?.mag ?? 0.0
@@ -50,12 +50,11 @@ class EartquakeViewModel  {
                         print("Magnitude: \(magnitude), Time: (time), Place: \(place)")
                         self?.coordinates.append(.init(longitude: coordinatesList[0], latitude: coordinatesList[1], depth: nil))
                         
-                        print("Magnitude: \(magnitude), Time: (time), Place: \(place)")
+                        print("Magnitude: \(magnitude),  Place: \(place)")
                     } else {
                         print("Coordinates are not available for this feature.")
                     }
                 }
-                
                 self?.success?()
             }
         }

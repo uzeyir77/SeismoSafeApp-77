@@ -2,12 +2,12 @@
 {
   "earthquakeSafety": [
     {
-      "title": "Actions at Home",
+      "title": "Drop, Cover and Hold",
       "subtitle": "Click here to view precautions for actions at home",
-      "precautions": [
-        "Take cover under a sturdy table or desk",
-        "Stay away from windows and heavy furniture",
-        "Secure tall furniture and appliances to walls",
+      "details": [
+        "DROP down on your hands and knees. This protects you from falling over but lets you move if you need to.",
+        "COVER your head and your neck (or your entire body if possible) under a sturdy table or desk (if it is within a few steps of you). If there is no shelter nearby, cover your head and neck with your arms and hands.",
+        "HOLD on to your shelter (or your position to protect your head and neck) until the shaking stops. If the shaking shifts your shelter around, move with it.",
         "Turn off gas appliances"
       ],
       "imageURL": "https://example.com/actions_at_home.jpg"
@@ -15,27 +15,27 @@
     {
       "title": "Safe Places in Open Areas",
       "subtitle": "Click here to view precautions for safe places in open areas",
-      "precautions": [
-        "Move to open areas away from buildings, trees, and streetlights",
+      "details": [
+        "If you are outside, find a clear area away from buildings, trees, streetlights, power lines, unstable slopes and cliffs: these may fall and cause injuries during an earthquake.",
         "Avoid overpasses and bridges",
-        "Protect your head and neck with your arms"
+        "Drop and Cover: Drop down on your hands and knees and cover your head and neck with your arms. Stay where you are until the shaking stops."
       ],
       "imageURL": "https://example.com/safe_places_open_areas.jpg"
     },
     {
       "title": "Safety Measures in Vehicles",
       "subtitle": "Click here to view precautions for safety measures in vehicles",
-      "precautions": [
-        "Pull over to a safe location away from overpasses, bridges, and buildings",
+      "details": [
+        "Pull over: to a clear location, away from trees, power lines, poles, street signs, overpasses, cliffs, and other overhead items, that may fall during earthquakes.",
         "Stay inside the vehicle until shaking stops",
-        "Avoid stopping under trees, streetlights, and utility wires"
+        "There may be more emergency vehicles on the road than normal. Make sure you allow them past as soon as it is safe to do so."
       ],
       "imageURL": "https://example.com/safety_measures_vehicles.jpg"
     },
     {
       "title": "First Aid Information",
       "subtitle": "Click here to view first aid information",
-      "precautions": [
+      "details": [
         "Check for injuries and provide first aid",
         "If someone is unconscious, call emergency services",
         "Treat bleeding with direct pressure",
@@ -46,7 +46,7 @@
     {
       "title": "Essential Supplies to Keep",
       "subtitle": "Click here to view the list of essential supplies to keep",
-      "supplies": [
+      "details": [
         "Water (1 gallon per person per day)",
         "Non-perishable food items",
         "First aid kit",
@@ -68,15 +68,24 @@
       "imageURL": "https://example.com/essential_supplies.jpg"
     },
     {
-      "title": "Emergency Plan",
+      "title": "As soon as the shaking stops",
       "subtitle": "Click here to view the emergency plan",
-      "plan": "Designate meeting points, establish communication plans, and practice evacuation routes with family members. Conduct regular drills.",
+      "details": [
+        "Check yourself for injuries and get first aid if necessary. Help others if you can.",
+        "If you are in a tsunami evacuation zone you need to move to higher ground immediately, or as far inland as you can, out of tsunami evacuation zones.",
+        "Look quickly for damage around you, particularly in buildings where furniture and fittings may have become hazardous.",
+        "Look for small fires and, if safe to do so, extinguish them.",
+        "If you can, put on protective, weather appropriate clothing that covers your arms and legs and sturdy footwear in case you have to move through debris.",
+        "If you are in a store, unfamiliar commercial building, or on public transport, follow the instructions of those in charge.",
+        "Do not run outside unless the building is showing obvious signs of distress, or you are in a tsunami evacuation zone. It is frightening to stay in a building, but it is much safer than immediately going outside, where masonry and glass could fall on you.",
+        "Your usual fire evacuation assembly area might not be a safe location after an earthquake if it is exposed to falling glass and masonry."
+      ],
       "imageURL": "https://example.com/emergency_plan.jpg"
     },
     {
       "title": "Precautions for Pets",
       "subtitle": "Click here to view precautions for pets",
-      "precautions": [
+      "details": [
         "Prepare an emergency kit for each pet with food, water, and medications",
         "Identify pet-friendly shelters in advance",
         "Ensure pets have proper identification",
@@ -88,7 +97,7 @@
     {
       "title": "Electrical and Gas Shutdown Procedures",
       "subtitle": "Click here to view electrical and gas shutdown procedures",
-      "procedures": [
+      "details": [
         "Turn off gas valves if safe to do so",
         "Switch off electrical circuit breakers",
         "Avoid using matches or lighters until gas is confirmed off",

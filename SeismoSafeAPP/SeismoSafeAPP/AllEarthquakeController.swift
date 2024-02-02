@@ -9,7 +9,6 @@ import UIKit
 
 class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    
     let viewModel2 = EartquakeViewModel()
     
     @IBOutlet weak var AllEarthquakeCell: UITableView!

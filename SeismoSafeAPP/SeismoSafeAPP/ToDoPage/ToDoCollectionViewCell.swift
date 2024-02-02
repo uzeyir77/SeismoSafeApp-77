@@ -14,9 +14,12 @@ class ToDoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var GoToDetailsButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
 }
+

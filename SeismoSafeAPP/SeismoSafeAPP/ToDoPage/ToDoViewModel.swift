@@ -8,13 +8,13 @@
 import Foundation
 
 class ToDoViewModel {
-    var safetyData: EarthquakeSafetyData?
-    var didSelectSafetyItem:((EarthquakeSafety)-> Void)?
+    var safetyData: EarthquakeSafety?
+    
     func parseJsonFile() {
         if let file = Bundle.main.url(forResource: "todolist", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: file)
-                safetyData = try JSONDecoder().decode(EarthquakeSafetyData.self, from: data)
+                safetyData = try JSONDecoder().decode(EarthquakeSafety.self, from: data)
                 print("JSON Parse Success")
             } catch {
                 print("Error parsing JSON: \(error.localizedDescription)")
@@ -24,4 +24,3 @@ class ToDoViewModel {
         }
     }
 }
-
