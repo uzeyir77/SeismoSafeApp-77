@@ -42,19 +42,19 @@ class EartquakeViewModel  {
             } else if let data = data {
                 self?.eartquakes = data.features ?? []
                 self?.coordinates.removeAll()
+
                 for feature in data.features ?? [] {
-                    if let coordinatesList = feature.geometry?.coordinates, coordinatesList.count >= 2 {
-                        let magnitude = feature.properties?.mag ?? 0.0
-                        //let time = self?.formattedTime(for: feature) ?? "Unknown Time"
-                        let place = feature.properties?.place ?? "Unknown Place"
-                        print("Magnitude: \(magnitude), Time: (time), Place: \(place)")
-                        self?.coordinates.append(.init(longitude: coordinatesList[0], latitude: coordinatesList[1], depth: nil))
-                        
-                        print("Magnitude: \(magnitude),  Place: \(place)")
+                    if let place = feature.properties?.place,
+                       let time = feature.properties?.time,
+                       let magnitude = feature.properties?.mag {
+
+                        print("Magnitude: \(magnitude), Time: \(time), Place: \(place)")
+
                     } else {
-                        print("Coordinates are not available for this feature.")
+                        print("Some properties are not available for this feature.")
                     }
                 }
+
                 self?.success?()
             }
         }

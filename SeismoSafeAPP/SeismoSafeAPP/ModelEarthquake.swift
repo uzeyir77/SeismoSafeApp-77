@@ -30,18 +30,11 @@ struct Geometry: Codable {
 struct Properties: Codable {
     let mag: Double?
     let place: String?
-    let time, updated, tz: Int?
+    let time, updated: Int?
     let url: String?
     let detail: String?
-    let felt: Int?
-    let cdi, mmi: Decimal?
-    let alert, status: String?
-    let tsunami, sig: Int?
-    let net, code, ids, sources: String?
+    let status: String?
     let types: String?
-    let nst: Int?
-    let dmin, rms: Double?
-    let gap: Int?
     let magType, type, title: String?
 }
 

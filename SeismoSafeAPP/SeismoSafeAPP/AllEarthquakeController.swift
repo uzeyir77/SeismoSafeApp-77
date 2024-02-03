@@ -14,13 +14,13 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
     @IBOutlet weak var AllEarthquakeCell: UITableView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         viewModel2.getlast1DayEartquakes()
-        viewModel2.success =  {[weak self ] in
-            self?.AllEarthquakeCell.reloadData() }
-        viewModel2.error = { [weak self ] errorMessages in
-            print("Error:\(errorMessages)")
+        viewModel2.success = {
+            self.AllEarthquakeCell.reloadData()
         }
+        
         AllEarthquakeCell.delegate = self
         AllEarthquakeCell.dataSource = self
     }

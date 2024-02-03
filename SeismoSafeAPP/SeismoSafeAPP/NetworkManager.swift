@@ -9,6 +9,8 @@ import Foundation
 import Alamofire
 class NetworkManager {
     
+    
+    
     static func request<T: Codable>(model: T.Type,
                                     endpoint: String,
                                     method: HTTPMethod = .get,
