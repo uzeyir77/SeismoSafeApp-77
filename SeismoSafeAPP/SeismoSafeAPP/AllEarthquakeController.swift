@@ -28,17 +28,46 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
             viewModel2.eartquakes.count
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MagnitudeCell", for: indexPath) as? MagnitudeCell else{
-                return UITableViewCell()
-            }
-            let eartquakes = viewModel2.eartquakes[indexPath.row]
-            cell.magnitudeLabel.text = "\(eartquakes.properties?.mag ?? 0)"
-            cell.placeLabel.text = eartquakes.properties?.place
-            //cell.timeLabel.text = "\(formattedTime(for: eartquakes))"
-            return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MagnitudeCell", for: indexPath) as? MagnitudeCell else {
+            return UITableViewCell()
         }
+
+        let eartquakes = viewModel2.eartquakes[indexPath.row]
+        cell.magnitudeLabel.text = "\(eartquakes.properties?.mag ?? 0)"
+        cell.placeLabel.text = eartquakes.properties?.place
+        cell.timeLabel.text = "\(formattedTime(for: eartquakes))"
         
+        
+        if let magnitude = eartquakes.properties?.mag, magnitude >= 3.0 {
+            cell.contentView.layer.borderColor = UIColor.red.cgColor
+            cell.contentView.layer.borderWidth = 2.0
+        } else {
+            cell.contentView.layer.borderColor = nil
+            cell.contentView.layer.borderWidth = 0.0
+        }
+
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedEarthquake = viewModel2.eartquakes[indexPath.row]
+        let alertController = UIAlertController(title: "Eartquakes Details", message: "Location: \(selectedEarthquake.properties?.place ?? "Unknown Place")\nMagnitude: \(selectedEarthquake.properties?.mag ?? 0)", preferredStyle: .actionSheet)
+        
+        let goToWebsiteAction = UIAlertAction(title: "More Information ", style: .default) { _ in
+                if let urlStr = selectedEarthquake.properties?.url,
+                   let url = URL(string: urlStr) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            alertController.addAction(goToWebsiteAction)
+            alertController.addAction(cancelAction)
+
+            present(alertController, animated: true, completion: nil)
+    }
+
     private func formattedTime(for feature: EarthquakeFeature) -> String {
            guard let time = feature.properties?.time else {
                return "Unknown Time"

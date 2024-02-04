@@ -6,8 +6,36 @@
 //
 
 import UIKit
+import ContactsUI
 
 class ToDoController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    @IBAction func emergencyCallButton(_ sender: Any) {
+        let alertController = UIAlertController(title: "Call", message: "Choose number", preferredStyle: .alert)
+        let numbers = ["112","103","911"]
+        
+        for number in numbers {
+            let numbersAction  = UIAlertAction(title: number, style: .default) {_ in
+                self.callNumber(phoneNumber: number)
+                
+            }
+            alertController.addAction(numbersAction)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+
+    }
+    func callNumber(phoneNumber: String) {
+            guard let phoneURL = URL(string: "tel://\(phoneNumber)") else { return }
+
+            if UIApplication.shared.canOpenURL(phoneURL) {
+                UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+            } else {
+                print("Desteklenmir")
+            }
+        }
     
     let viewModel = ToDoViewModel()
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
