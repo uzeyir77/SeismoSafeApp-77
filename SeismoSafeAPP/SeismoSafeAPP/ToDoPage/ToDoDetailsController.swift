@@ -27,6 +27,7 @@ class ToDoDetailsController: UIViewController {
             
             detailTitleLabel.text = safetyItem.title
             detailLabelField.text = safetyItem.details.joined(separator: "\n")
+            detailImageField.image = UIImage(named: safetyItem.imageURL!)
             
             if let imageURL = safetyItem.imageURL, let url = URL(string: imageURL) {
                 

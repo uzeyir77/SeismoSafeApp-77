@@ -10,7 +10,7 @@
         "HOLD on to your shelter (or your position to protect your head and neck) until the shaking stops. If the shaking shifts your shelter around, move with it.",
         "Turn off gas appliances"
       ],
-      "imageURL": "https://example.com/actions_at_home.jpg"
+      "imageURL": "homeemergency"
     },
     {
       "title": "Safe Places in Open Areas",
@@ -20,7 +20,7 @@
         "Avoid overpasses and bridges",
         "Drop and Cover: Drop down on your hands and knees and cover your head and neck with your arms. Stay where you are until the shaking stops."
       ],
-      "imageURL": "https://example.com/safe_places_open_areas.jpg"
+      "imageURL": "openareas"
     },
     {
       "title": "Safety Measures in Vehicles",
@@ -30,7 +30,7 @@
         "Stay inside the vehicle until shaking stops",
         "There may be more emergency vehicles on the road than normal. Make sure you allow them past as soon as it is safe to do so."
       ],
-      "imageURL": "https://example.com/safety_measures_vehicles.jpg"
+      "imageURL": "incarduringshaking"
     },
     {
       "title": "First Aid Information",
@@ -41,7 +41,7 @@
         "Treat bleeding with direct pressure",
         "Provide comfort and reassurance"
       ],
-      "imageURL": "https://example.com/first_aid_information.jpg"
+      "imageURL": "firstaidinfo"
     },
     {
       "title": "Essential Supplies to Keep",
@@ -65,7 +65,7 @@
         "Moist towelettes and garbage bags for sanitation",
         "Emergency contact list with addresses and phone numbers"
       ],
-      "imageURL": "https://example.com/essential_supplies.jpg"
+      "imageURL": "kit2"
     },
     {
       "title": "As soon as the shaking stops",
@@ -80,7 +80,7 @@
         "Do not run outside unless the building is showing obvious signs of distress, or you are in a tsunami evacuation zone. It is frightening to stay in a building, but it is much safer than immediately going outside, where masonry and glass could fall on you.",
         "Your usual fire evacuation assembly area might not be a safe location after an earthquake if it is exposed to falling glass and masonry."
       ],
-      "imageURL": "https://example.com/emergency_plan.jpg"
+      "imageURL": "aftershaking"
     },
     {
       "title": "Precautions for Pets",
@@ -92,7 +92,7 @@
         "Include pet toys and comfort items in their emergency kit",
         "Microchip pets for easy identification"
       ],
-      "imageURL": "https://example.com/precautions_for_pets.jpg"
+      "imageURL": "pet"
     },
     {
       "title": "Electrical and Gas Shutdown Procedures",

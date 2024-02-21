@@ -12,7 +12,6 @@ import MapKit
 class EartquakeViewModel  {
     var eartquakes: [EarthquakeFeature] = []
     var coordinates = [Coordinates]()
-    
     var allAnnotations: [MKAnnotation] = []
     
     var success: (() -> Void)?
@@ -43,22 +42,21 @@ class EartquakeViewModel  {
                 self?.eartquakes = data.features ?? []
                 self?.coordinates.removeAll()
 
-                for feature in data.features ?? [] {
-                    if let place = feature.properties?.place,
-                       let time = feature.properties?.time,
-                       let magnitude = feature.properties?.mag {
-
-                        print("Magnitude: \(magnitude), Time: \(time), Place: \(place)")
-
-                    } else {
-                        print("Some properties are not available for this feature.")
-                    }
-                }
-
+//                for feature in data.features ?? [] {
+//                    if let place = feature.properties?.place,
+//                       let time = feature.properties?.time,
+//                       let magnitude = feature.properties?.mag {
+//
+//                        //print("Magnitude: \(magnitude), Time: \(time), Place: \(place)")
+//                    } else {
+//                        print("Some properties are not available for this feature.")
+//                    }
+//                }
                 self?.success?()
             }
         }
     }
+    
     private func formattedTime(for feature: EarthquakeFeature) -> String {
         guard let time = feature.properties?.time else {
             return "Unknown Time"

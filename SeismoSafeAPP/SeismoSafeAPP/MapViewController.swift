@@ -18,10 +18,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         mapView.delegate = self
-        
         fetchData()
     }
-    
     func fetchData() {
         viewModel.getLast1HourEarthquakes()
         viewModel.success = {
@@ -44,7 +42,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         mapView.showAnnotations(viewModel.allAnnotations, animated: true)
     }
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let earthquakeAnnotation = annotation as? EarthquakeAnnotation else {
             return nil
@@ -60,7 +57,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotationView.calloutOffset = CGPoint(x: -5, y: 5)
             annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
-        
         if earthquakeAnnotation.earthquakeFeature.properties?.mag ?? 0 > 1.0 {
             startBlinking(for: annotationView)
         } else {
@@ -70,11 +66,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         return annotationView
     }
-    
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        //        fetchData()
-    }
-    
+//    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+//        //        fetchData()
+//    }
     func startBlinking(for annotationView: MKAnnotationView) {
         let animation = CABasicAnimation(keyPath: "opacity")
         animation.fromValue = 1
@@ -84,7 +78,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         animation.repeatCount = Float.infinity
         annotationView.layer.add(animation, forKey: "blinking")
     }
-    
     func stopBlinking(for annotationView: MKAnnotationView) {
         annotationView.layer.removeAnimation(forKey: "blinking")
     }

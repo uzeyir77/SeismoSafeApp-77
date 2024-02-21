@@ -36,9 +36,8 @@ class NetworkManager {
                         print("JSON parse hatası: \(error.localizedDescription)")
                     }
                 }
-
                     completion(nil, error.localizedDescription)
-                }
+            }
         }
     }
 }

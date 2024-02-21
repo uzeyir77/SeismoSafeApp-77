@@ -13,7 +13,7 @@ class EarthquakeAnnotation: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
     var earthquakeFeature: EarthquakeFeature
-
+    
     init(coordinate: CLLocationCoordinate2D, earthquakeFeature: EarthquakeFeature) {
         self.coordinate = coordinate
         self.earthquakeFeature = earthquakeFeature
@@ -21,7 +21,6 @@ class EarthquakeAnnotation: NSObject, MKAnnotation {
         self.title = "Magnitude: \(earthquakeFeature.properties?.mag ?? 0)" 
         self.subtitle = "Place: \(earthquakeFeature.properties?.place ?? "")\nTime: \(formattedTime(for: earthquakeFeature))"
     }
-
     private func formattedTime(for earthquake: EarthquakeFeature) -> String {
         guard let time = earthquake.properties?.time else {
             return ""
