@@ -32,6 +32,7 @@
 		A66805352B56D8D2005DA015 /* EarthquakeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66805342B56D8D2005DA015 /* EarthquakeAnnotation.swift */; };
 		A668055F2B57DD7C005DA015 /* EarthquakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668055E2B57DD7C005DA015 /* EarthquakeDetailViewController.swift */; };
 		A66805C12B630174005DA015 /* ToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66805C02B630174005DA015 /* ToDoController.swift */; };
+		A6F209EF2B869656007B5A1E /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F209EE2B869656007B5A1E /* AboutController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		A66805342B56D8D2005DA015 /* EarthquakeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeAnnotation.swift; sourceTree = "<group>"; };
 		A668055E2B57DD7C005DA015 /* EarthquakeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeDetailViewController.swift; sourceTree = "<group>"; };
 		A66805C02B630174005DA015 /* ToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoController.swift; sourceTree = "<group>"; };
+		A6F209EE2B869656007B5A1E /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				A66805192B5450B6005DA015 /* LaunchScreen.storyboard */,
 				A668051C2B5450B6005DA015 /* Info.plist */,
 				A66805142B5450B4005DA015 /* SeismoSafeAPP.xcdatamodeld */,
+				A6F209EE2B869656007B5A1E /* AboutController.swift */,
 				A66805222B548B10005DA015 /* AllEarthquakeController.swift */,
 				A66805242B55A234005DA015 /* NetworkManager.swift */,
 				A66805292B55AE6B005DA015 /* NetworkHelper.swift */,
@@ -236,6 +239,7 @@
 				A66805232B548B10005DA015 /* AllEarthquakeController.swift in Sources */,
 				A668052F2B55B169005DA015 /* EarthquakeViewModel.swift in Sources */,
 				A66805312B569E73005DA015 /* ModelEarthquake.swift in Sources */,
+				A6F209EF2B869656007B5A1E /* AboutController.swift in Sources */,
 				A668050E2B5450B4005DA015 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

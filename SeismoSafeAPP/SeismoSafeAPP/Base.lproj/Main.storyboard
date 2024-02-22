@@ -33,7 +33,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-hw-LYi">
                                                     <rect key="frame" x="12" y="0.0" width="46" height="44.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -83,9 +83,6 @@
                                     <constraint firstAttribute="height" constant="44" id="cO4-uR-9iM"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="alE-YG-jOB" id="pZL-aC-a6T"/>
-                                </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d6a-OC-O9O"/>
@@ -105,6 +102,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="AllEarthquakeCell" destination="yvS-Pm-CXS" id="T16-Tc-6RO"/>
+                        <outlet property="searchBar" destination="XuQ-CF-GeP" id="suO-H1-al8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n14-tI-jG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="732.06106870229007" y="-297.18309859154931"/>
         </scene>
-        <!--View Controller-->
+        <!--About Controller-->
         <scene sceneID="oD1-Q2-7jb">
             <objects>
-                <viewController id="8Co-r6-Gzx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutController" id="8Co-r6-Gzx" customClass="AboutController" customModule="SeismoSafeAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fuD-Hf-OU5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,6 +283,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqy-Q7-xkw">
+                                <rect key="frame" x="159" y="674" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="gotoMap:" destination="8Co-r6-Gzx" eventType="touchUpInside" id="S7L-VV-wAM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tyU-MG-zss"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

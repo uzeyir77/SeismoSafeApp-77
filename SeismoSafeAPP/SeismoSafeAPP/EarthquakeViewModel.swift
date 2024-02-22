@@ -56,6 +56,13 @@ class EartquakeViewModel  {
             }
         }
     }
+    func search(for searchText: String) {
+        let filteredEarthquakes = eartquakes.filter { earthquake in
+            return earthquake.properties?.place?.lowercased().contains(searchText.lowercased()) == true
+        }
+        eartquakes = filteredEarthquakes
+        success?()
+    }
     
     private func formattedTime(for feature: EarthquakeFeature) -> String {
         guard let time = feature.properties?.time else {

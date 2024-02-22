@@ -37,7 +37,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             let coordinate = CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
             
             let annotation = EarthquakeAnnotation(coordinate: coordinate, earthquakeFeature: earthquake)
-            mapView.addAnnotation(annotation)
+            mapView?.addAnnotation(annotation)
             viewModel.allAnnotations.append(annotation)
         }
         mapView.showAnnotations(viewModel.allAnnotations, animated: true)
