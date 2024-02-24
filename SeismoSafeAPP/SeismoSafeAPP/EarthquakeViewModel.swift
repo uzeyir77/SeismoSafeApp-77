@@ -63,6 +63,37 @@ class EartquakeViewModel  {
         eartquakes = filteredEarthquakes
         success?()
     }
+    func filterEarthquakes(byMagnitudeSegment segmentIndex: Int) -> [EarthquakeFeature] {
+        let minMagnitude: Double
+        let maxMagnitude: Double
+        
+        switch segmentIndex {
+        case 0:
+            minMagnitude = 0.0
+            maxMagnitude = 3.0
+        case 1:
+            minMagnitude = 3.1
+            maxMagnitude = 5.0
+        case 2:
+            minMagnitude = 5.1
+            maxMagnitude = 10.0
+        default:
+            minMagnitude = 0.0
+            maxMagnitude = 0.0
+        }
+        
+        let filteredEarthquakes = eartquakes.filter { earthquake in
+            if let magnitude = earthquake.properties?.mag {
+                return magnitude >= minMagnitude && magnitude <= maxMagnitude
+            }
+            return false
+        }
+        
+        return filteredEarthquakes
+    }
+
+    
+       
     
     private func formattedTime(for feature: EarthquakeFeature) -> String {
         guard let time = feature.properties?.time else {
