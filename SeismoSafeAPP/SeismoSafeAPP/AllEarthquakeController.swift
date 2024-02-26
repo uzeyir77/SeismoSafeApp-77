@@ -11,6 +11,7 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
     let viewModel2 = EartquakeViewModel()
     @IBOutlet weak var AllEarthquakeCell: UITableView!
     
+    @IBOutlet weak var segmentControlFilter: UISegmentedControl!
     
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
@@ -47,7 +48,6 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         }
         return cell
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedEarthquake = viewModel2.eartquakes[indexPath.row]
         let alertController = UIAlertController(title: "Eartquakes Details", message: "Location: \(selectedEarthquake.properties?.place ?? "Unknown Place")\nMagnitude: \(selectedEarthquake.properties?.mag ?? 0)", preferredStyle: .actionSheet)
@@ -72,6 +72,7 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
         return dateFormatter.string(from: date)
     }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
      print("search bar clicked")
             viewModel2.search(for: searchBar.text ?? "")
@@ -79,6 +80,4 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         searchBar.resignFirstResponder()
         //AllEarthquakeCell.reloadData()
         }
-        
-    
 }

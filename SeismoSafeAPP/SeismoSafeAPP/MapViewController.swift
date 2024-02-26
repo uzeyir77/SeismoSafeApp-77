@@ -38,7 +38,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
        func displayEarthquakeOnMap(forMagnitudeSegment segmentIndex: Int) {
            mapView.removeAnnotations(viewModel.allAnnotations)
            
-           // Filtreleme işlemi
            let filteredEarthquakes = viewModel.filterEarthquakes(byMagnitudeSegment: segmentIndex)
            
            let limitedEarthquakes = Array(filteredEarthquakes.prefix(10))
@@ -48,7 +47,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                      coordinates.count >= 2 else {
                    continue
                }
-               
                let coordinate = CLLocationCoordinate2D(latitude: coordinates[1], longitude: coordinates[0])
                let annotation = EarthquakeAnnotation(coordinate: coordinate, earthquakeFeature: earthquake)
                mapView.addAnnotation(annotation)
@@ -57,7 +55,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
            
            mapView.showAnnotations(viewModel.allAnnotations, animated: true)
        }
-       
        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
            guard let earthquakeAnnotation = annotation as? EarthquakeAnnotation else {
                return nil
