@@ -24,6 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
            fetchData()
        }
        
+    
        func fetchData() {
            viewModel.getLast1HourEarthquakes()
            viewModel.success = { [self] in
@@ -82,6 +83,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
            
            return annotationView
        }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            if let annotation = view.annotation {
+                let popupViewController = UIAlertController(title: annotation.title ?? "", message: annotation.subtitle ?? "", preferredStyle: .alert)
+                popupViewController.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                present(popupViewController, animated: true, completion: nil)
+            } else {
+                print("Alinmadi")
+            }
+        }
+    }
+
        
        func startBlinking(for annotationView: MKAnnotationView) {
            let animation = CABasicAnimation(keyPath: "opacity")
@@ -96,4 +109,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
        func stopBlinking(for annotationView: MKAnnotationView) {
            annotationView.layer.removeAnimation(forKey: "blinking")
        }
+    func showBottomSheet(for annotation: EarthquakeAnnotation) {
+        let boottomSheetViewController = BottomSheetViewController()
+        
+        present(boottomSheetViewController, animated: true, completion: nil)
+    }
    }

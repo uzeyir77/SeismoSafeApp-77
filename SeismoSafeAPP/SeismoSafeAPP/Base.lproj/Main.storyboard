@@ -25,20 +25,20 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MagnitudeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MagnitudeCell" id="lCn-wP-qfu" customClass="MagnitudeCell" customModule="SeismoSafeAPP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lCn-wP-qfu" id="EYY-Hr-rIF">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-hw-LYi">
-                                                    <rect key="frame" x="12" y="0.0" width="46" height="44"/>
+                                                    <rect key="frame" x="12" y="0.0" width="46" height="44.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA,New York" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-Hj-Zh6">
-                                                    <rect key="frame" x="80" y="4" width="271" height="20.666666666666668"/>
+                                                    <rect key="frame" x="80" y="4" width="271" height="21.333333333333332"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="YTN-Po-pxd"/>
                                                     </constraints>
@@ -47,7 +47,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIG-yA-NAQ">
-                                                    <rect key="frame" x="80" y="28.333333333333329" width="271" height="16"/>
+                                                    <rect key="frame" x="80" y="29" width="271" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="fMC-Ou-d8Q"/>
                                                     </constraints>
@@ -85,7 +85,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HOe-gr-Sb6">
-                                <rect key="frame" x="211" y="103" width="166" height="32"/>
+                                <rect key="frame" x="211" y="96" width="166" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="0-3"/>
@@ -118,6 +118,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n14-tI-jG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="735.1145038167939" y="402.81690140845075"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E7W-ne-UrE">
+            <objects>
+                <viewController id="m62-gu-yY5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="10t-0V-dMf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w0X-OF-LoQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q7W-QC-gjB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pjt-gk-Iue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="1089"/>
         </scene>
         <!--Earthquake Safety Guide-->
         <scene sceneID="eNc-7w-hFg">
@@ -195,9 +211,9 @@
                                 <rect key="frame" x="0.0" y="425" width="393" height="513"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBL-9T-gxN">
-                                        <rect key="frame" x="8" y="0.0" width="377" height="482"/>
+                                        <rect key="frame" x="8" y="0.0" width="377" height="580"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="482" id="cqR-xb-PfH"/>
+                                            <constraint firstAttribute="height" constant="580" id="d3h-KG-mX9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -205,11 +221,11 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="leading" secondItem="jpC-sJ-WoR" secondAttribute="leadingMargin" id="CwA-Qe-axM"/>
-                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="trailing" secondItem="jpC-sJ-WoR" secondAttribute="trailingMargin" id="Pw8-5s-wJq"/>
-                                    <constraint firstAttribute="bottom" secondItem="XBL-9T-gxN" secondAttribute="bottom" constant="31" id="YWo-9m-SQx"/>
-                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="centerX" secondItem="jpC-sJ-WoR" secondAttribute="centerX" id="Zgd-hF-eF8"/>
-                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="top" secondItem="1ir-lL-nvH" secondAttribute="top" id="b04-TO-f1j"/>
+                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="top" secondItem="1ir-lL-nvH" secondAttribute="top" id="6IL-r1-4Dg"/>
+                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="trailing" secondItem="jpC-sJ-WoR" secondAttribute="trailingMargin" id="GjT-jK-hcd"/>
+                                    <constraint firstAttribute="bottom" secondItem="XBL-9T-gxN" secondAttribute="bottom" constant="-67" id="RtV-84-phq"/>
+                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="centerX" secondItem="jpC-sJ-WoR" secondAttribute="centerX" id="dUU-VW-cZ8"/>
+                                    <constraint firstItem="XBL-9T-gxN" firstAttribute="leading" secondItem="jpC-sJ-WoR" secondAttribute="leadingMargin" id="vqR-pt-eRx"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="1ir-lL-nvH"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="1nz-g1-c2S"/>
@@ -295,6 +311,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kpe-ho-f0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="732.06106870229007" y="-297.18309859154931"/>
+        </scene>
+        <!--Bottom Sheet View Controller-->
+        <scene sceneID="xSY-1l-udv">
+            <objects>
+                <viewController storyboardIdentifier="BottomSheetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ehk-d3-eyh" customClass="BottomSheetViewController" customModule="SeismoSafeAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Af2-nl-cMj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7wo-dc-xBB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNd-9g-nF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="-286"/>
         </scene>
         <!--About Controller-->
         <scene sceneID="oD1-Q2-7jb">
@@ -425,6 +456,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbp-Q3-Q1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3283.2061068702287" y="-70.422535211267615"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bGV-eS-wEn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iFo-i1-z3P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YnD-BO-4k9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m62-gu-yY5" kind="relationship" relationship="rootViewController" id="3Rl-sZ-hbR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxp-cB-XPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195" y="1090"/>
         </scene>
     </scenes>
     <resources>

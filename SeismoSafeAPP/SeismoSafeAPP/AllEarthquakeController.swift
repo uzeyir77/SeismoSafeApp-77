@@ -23,7 +23,11 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         AllEarthquakeCell.delegate = self
         AllEarthquakeCell.dataSource = self
         searchBar.delegate = self
+        segmentControlFilter.addTarget(self, action: #selector(segmentControlValueChanged(_ :)), for: .valueChanged)
     }
+    @objc func segmentControlValueChanged(_ sender: UISegmentedControl) {
+           filterDataForSegment(sender.selectedSegmentIndex)
+       }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel2.eartquakes.count
     }
@@ -71,6 +75,7 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
         return dateFormatter.string(from: date)
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -80,4 +85,13 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         searchBar.resignFirstResponder()
         //AllEarthquakeCell.reloadData()
         }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            if searchText.isEmpty {
+                searchBar.resignFirstResponder()
+            }
+        }
+    func filterDataForSegment(_ segmentIndex:Int){
+        viewModel2.eartquakes = viewModel2.filterEarthquakes(byMagnitudeSegment: segmentIndex)
+        AllEarthquakeCell.reloadData()
+    }
 }

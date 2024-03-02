@@ -11,6 +11,7 @@ import MapKit
 
 class EartquakeViewModel  {
     var eartquakes: [EarthquakeFeature] = []
+    var originalEarthquakes: [EarthquakeFeature] = []
     var coordinates = [Coordinates]()
     var allAnnotations: [MKAnnotation] = []
     
@@ -93,7 +94,7 @@ class EartquakeViewModel  {
     }
 
     
-       
+    
     
     private func formattedTime(for feature: EarthquakeFeature) -> String {
         guard let time = feature.properties?.time else {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A610347F2B90E0E1001BA84F /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A610347E2B90E0E1001BA84F /* BottomSheetViewController.swift */; };
 		A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */; };
 		A65B636B2B684AA8007B47F1 /* ToDoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */; };
 		A65B636C2B684AA8007B47F1 /* ToDoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B636A2B684AA8007B47F1 /* ToDoCollectionViewCell.xib */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A610347E2B90E0E1001BA84F /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnitudeCell.swift; sourceTree = "<group>"; };
 		A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A65B636A2B684AA8007B47F1 /* ToDoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -78,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A610347D2B90DDD5001BA84F /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				A66805242B55A234005DA015 /* NetworkManager.swift */,
+				A66805292B55AE6B005DA015 /* NetworkHelper.swift */,
+				A66805322B56C9C8005DA015 /* Endpoints.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
 		A65B63772B69B3E6007B47F1 /* ToDoPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,23 +126,22 @@
 			children = (
 				A668050B2B5450B4005DA015 /* AppDelegate.swift */,
 				A668050D2B5450B4005DA015 /* SceneDelegate.swift */,
-				A668050F2B5450B4005DA015 /* MapViewController.swift */,
+				A610347D2B90DDD5001BA84F /* Network Layer */,
 				A66805112B5450B4005DA015 /* Main.storyboard */,
 				A66805172B5450B6005DA015 /* Assets.xcassets */,
 				A66805192B5450B6005DA015 /* LaunchScreen.storyboard */,
 				A668051C2B5450B6005DA015 /* Info.plist */,
 				A66805142B5450B4005DA015 /* SeismoSafeAPP.xcdatamodeld */,
 				A6F209EE2B869656007B5A1E /* AboutController.swift */,
+				A668050F2B5450B4005DA015 /* MapViewController.swift */,
 				A66805222B548B10005DA015 /* AllEarthquakeController.swift */,
-				A66805242B55A234005DA015 /* NetworkManager.swift */,
-				A66805292B55AE6B005DA015 /* NetworkHelper.swift */,
 				A668052E2B55B169005DA015 /* EarthquakeViewModel.swift */,
 				A66805302B569E73005DA015 /* ModelEarthquake.swift */,
-				A66805322B56C9C8005DA015 /* Endpoints.swift */,
 				A66805342B56D8D2005DA015 /* EarthquakeAnnotation.swift */,
 				A668055E2B57DD7C005DA015 /* EarthquakeDetailViewController.swift */,
 				A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */,
 				A65B63772B69B3E6007B47F1 /* ToDoPage */,
+				A610347E2B90E0E1001BA84F /* BottomSheetViewController.swift */,
 			);
 			path = SeismoSafeAPP;
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 				A65B63742B699AE3007B47F1 /* ToDoViewModel.swift in Sources */,
 				A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */,
 				A65B63722B699A39007B47F1 /* ToDoModel.swift in Sources */,
+				A610347F2B90E0E1001BA84F /* BottomSheetViewController.swift in Sources */,
 				A668052A2B55AE6C005DA015 /* NetworkHelper.swift in Sources */,
 				A65B63762B69A4D3007B47F1 /* ToDoDetailsController.swift in Sources */,
 				A66805252B55A234005DA015 /* NetworkManager.swift in Sources */,
