@@ -42,17 +42,6 @@ class EartquakeViewModel  {
             } else if let data = data {
                 self?.eartquakes = data.features ?? []
                 self?.coordinates.removeAll()
-
-//                for feature in data.features ?? [] {
-//                    if let place = feature.properties?.place,
-//                       let time = feature.properties?.time,
-//                       let magnitude = feature.properties?.mag {
-//
-//                        //print("Magnitude: \(magnitude), Time: \(time), Place: \(place)")
-//                    } else {
-//                        print("Some properties are not available for this feature.")
-//                    }
-//                }
                 self?.success?()
             }
         }
@@ -82,20 +71,14 @@ class EartquakeViewModel  {
             minMagnitude = 0.0
             maxMagnitude = 0.0
         }
-        
         let filteredEarthquakes = eartquakes.filter { earthquake in
             if let magnitude = earthquake.properties?.mag {
                 return magnitude >= minMagnitude && magnitude <= maxMagnitude
             }
             return false
         }
-        
         return filteredEarthquakes
     }
-
-    
-    
-    
     private func formattedTime(for feature: EarthquakeFeature) -> String {
         guard let time = feature.properties?.time else {
             return "Unknown Time"

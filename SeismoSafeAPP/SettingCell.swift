@@ -1,21 +1,14 @@
 //
-//  MagnitudeCell.swift
+//  SettingCell.swift
 //  SeismoSafeAPP
 //
-//  Created by Uzeyir on 29.01.24.
+//  Created by Uzeyir on 27.03.24.
 //
 
 import UIKit
 
-class MagnitudeCell: UITableViewCell {
+class SettingCell: UITableViewCell {
 
-   
-    @IBOutlet weak var magnitudeLabel: UILabel!
-    
-    @IBOutlet weak var placeLabel: UILabel!
-    
-    @IBOutlet weak var timeLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

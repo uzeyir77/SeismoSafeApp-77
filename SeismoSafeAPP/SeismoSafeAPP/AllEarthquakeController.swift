@@ -18,7 +18,7 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         super.viewDidLoad()
         viewModel2.getlast1DayEartquakes()
         viewModel2.success = {
-            self.AllEarthquakeCell.reloadData()
+        self.AllEarthquakeCell.reloadData()
         }
         AllEarthquakeCell.delegate = self
         AllEarthquakeCell.dataSource = self
@@ -38,7 +38,7 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         let eartquakes = viewModel2.eartquakes[indexPath.row]
         cell.magnitudeLabel.text = "\(eartquakes.properties?.mag ?? 0)"
         cell.placeLabel.text = eartquakes.properties?.place
-        cell.timeLabel.text = "\(formattedTime(for: eartquakes))"
+        cell.timeLabel.text = "\(EarthquakeFeatureAdapter.formattedTime(for: eartquakes))"
         if let magnitude = eartquakes.properties?.mag {
             if magnitude >= 3.5 {
                 cell.magnitudeLabel.textColor = UIColor.red
@@ -47,10 +47,10 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
             } else {
                 cell.magnitudeLabel.textColor = UIColor.blue
             }
-        } else {
+            } else {
             cell.magnitudeLabel.textColor = UIColor.black
-        }
-        return cell
+            }
+           return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedEarthquake = viewModel2.eartquakes[indexPath.row]
@@ -66,24 +66,11 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
     }
-    private func formattedTime(for feature: EarthquakeFeature) -> String {
-        guard let time = feature.properties?.time else {
-            return "Unknown Time"
-        }
-        let date = Date(timeIntervalSince1970: TimeInterval(time / 1000))
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        dateFormatter.timeZone = TimeZone(identifier: "UTC")
-        return dateFormatter.string(from: date)
-        
-    }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
      print("search bar clicked")
             viewModel2.search(for: searchBar.text ?? "")
             AllEarthquakeCell.reloadData()
         searchBar.resignFirstResponder()
-        //AllEarthquakeCell.reloadData()
         }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             if searchText.isEmpty {
@@ -95,3 +82,4 @@ class AllEarthquakeController: UIViewController,UITableViewDelegate, UITableView
         AllEarthquakeCell.reloadData()
     }
 }
+

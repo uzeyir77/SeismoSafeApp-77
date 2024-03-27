@@ -16,37 +16,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stt-yJ-c6n">
-                        <rect key="frame" x="1" y="0.0" width="350" height="250"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stt-yJ-c6n">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="211"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Action at Home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U69-cc-yng">
-                                <rect key="frame" x="8" y="45" width="217" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" You can see the precautions that can be taken at home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-8B-P8k">
-                                <rect key="frame" x="8" y="132" width="210" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" You can see the precautions that can be taken at home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-8B-P8k">
+                                <rect key="frame" x="8" y="91" width="220" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="EgK-N9-ffC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apB-vt-t13">
-                                <rect key="frame" x="252" y="67" width="98" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action at Home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U69-cc-yng">
+                                <rect key="frame" x="8" y="24" width="334" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="1dj-vG-ktD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apB-vt-t13">
+                                <rect key="frame" x="282" y="99" width="61" height="35"/>
                                 <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.right" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0042074453950000004" green="0.12659109539999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k7X-8B-P8k" firstAttribute="top" secondItem="U69-cc-yng" secondAttribute="bottom" id="2cn-pr-mIt"/>
+                            <constraint firstItem="U69-cc-yng" firstAttribute="top" secondItem="stt-yJ-c6n" secondAttribute="top" constant="24" id="2pc-mU-JOG"/>
+                            <constraint firstAttribute="trailing" secondItem="apB-vt-t13" secondAttribute="trailing" constant="7" id="I9Q-wK-r12"/>
+                            <constraint firstItem="apB-vt-t13" firstAttribute="top" secondItem="stt-yJ-c6n" secondAttribute="top" constant="99" id="Lwc-Xn-LRk"/>
+                            <constraint firstItem="U69-cc-yng" firstAttribute="leading" secondItem="k7X-8B-P8k" secondAttribute="leading" id="TAZ-Tk-Dga"/>
+                            <constraint firstItem="apB-vt-t13" firstAttribute="leading" secondItem="k7X-8B-P8k" secondAttribute="trailing" constant="54" id="YCB-ke-yLz"/>
+                            <constraint firstItem="U69-cc-yng" firstAttribute="leading" secondItem="stt-yJ-c6n" secondAttribute="leadingMargin" id="lfN-dX-jGn"/>
+                            <constraint firstItem="apB-vt-t13" firstAttribute="centerY" secondItem="k7X-8B-P8k" secondAttribute="centerY" id="pAu-h6-LcU"/>
+                            <constraint firstItem="U69-cc-yng" firstAttribute="trailing" secondItem="stt-yJ-c6n" secondAttribute="trailingMargin" id="sv6-56-Z5T"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="stt-yJ-c6n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0Jp-z3-jqq"/>
+                <constraint firstItem="stt-yJ-c6n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GsJ-5b-zVj"/>
+                <constraint firstAttribute="bottom" secondItem="stt-yJ-c6n" secondAttribute="bottom" constant="-11" id="XTo-XP-cNz"/>
+                <constraint firstItem="stt-yJ-c6n" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lyb-so-8p1"/>
+            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                     <integer key="value" value="20"/>
@@ -58,7 +77,7 @@
                 <outlet property="titleLabel" destination="U69-cc-yng" id="IcG-6O-uwR"/>
                 <outlet property="viewToDo" destination="stt-yJ-c6n" id="Q5W-gp-UnA"/>
             </connections>
-            <point key="canvasLocation" x="54.961832061068698" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="38.167938931297705" y="-2.1126760563380285"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -23,19 +23,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
            magnitudeSegmentControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
            fetchData()
        }
-       
-    
        func fetchData() {
            viewModel.getLast1HourEarthquakes()
            viewModel.success = { [self] in
                self.displayEarthquakeOnMap(forMagnitudeSegment: magnitudeSegmentControl.selectedSegmentIndex)
            }
        }
-       
        @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
            displayEarthquakeOnMap(forMagnitudeSegment: sender.selectedSegmentIndex)
        }
-       
        func displayEarthquakeOnMap(forMagnitudeSegment segmentIndex: Int) {
            mapView.removeAnnotations(viewModel.allAnnotations)
            
@@ -56,33 +52,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
            
            mapView.showAnnotations(viewModel.allAnnotations, animated: true)
        }
-       func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-           guard let earthquakeAnnotation = annotation as? EarthquakeAnnotation else {
-               return nil
-           }
-           
-           let identifier = "earthquakePin"
-           var annotationView: MKAnnotationView
-           
-           if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
-               annotationView = dequeuedView
-           } else {
-               annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-               annotationView.canShowCallout = true
-               annotationView.calloutOffset = CGPoint(x: -5, y: 5)
-               annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-           }
-           
-           if earthquakeAnnotation.earthquakeFeature.properties?.mag ?? 0 > 1.0 {
-               startBlinking(for: annotationView)
-           } else {
-               stopBlinking(for: annotationView)
-           }
-           
-           annotationView.image = UIImage(named: "alarm_icon 2")
-           
-           return annotationView
-       }
+       
+   }
+//MARK Extension
+extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             if let annotation = view.annotation {
@@ -94,24 +67,44 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
         }
     }
-
-       
-       func startBlinking(for annotationView: MKAnnotationView) {
-           let animation = CABasicAnimation(keyPath: "opacity")
-           animation.fromValue = 1
-           animation.toValue = 0
-           animation.autoreverses = true
-           animation.duration = 0.5
-           animation.repeatCount = Float.infinity
-           annotationView.layer.add(animation, forKey: "blinking")
-       }
-       
-       func stopBlinking(for annotationView: MKAnnotationView) {
-           annotationView.layer.removeAnimation(forKey: "blinking")
-       }
-    func showBottomSheet(for annotation: EarthquakeAnnotation) {
-        let boottomSheetViewController = BottomSheetViewController()
-        
-        present(boottomSheetViewController, animated: true, completion: nil)
+    func startBlinking(for annotationView: MKAnnotationView) {
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 1
+        animation.toValue = 0
+        animation.autoreverses = true
+        animation.duration = 0.5
+        animation.repeatCount = Float.infinity
+        annotationView.layer.add(animation, forKey: "blinking")
     }
-   }
+    func stopBlinking(for annotationView: MKAnnotationView) {
+        annotationView.layer.removeAnimation(forKey: "blinking")
+    }
+ func showBottomSheet(for annotation: EarthquakeAnnotation) {
+     let boottomSheetViewController = BottomSheetViewController()
+     
+     present(boottomSheetViewController, animated: true, completion: nil)
+ }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let earthquakeAnnotation = annotation as? EarthquakeAnnotation else {
+            return nil
+        }
+        let identifier = "earthquakePin"
+        var annotationView: MKAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+            annotationView = dequeuedView
+        } else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView.canShowCallout = true
+            annotationView.calloutOffset = CGPoint(x: -5, y: 5)
+            annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        if earthquakeAnnotation.earthquakeFeature.properties?.mag ?? 0 > 1.0 {
+            startBlinking(for: annotationView)
+        } else {
+            stopBlinking(for: annotationView)
+        }
+        annotationView.image = UIImage(named: "alarm_icon 2")
+        return annotationView
+    }
+}

@@ -12,8 +12,7 @@ class ToDoDetailsController: UIViewController {
     @IBOutlet weak var detailTitleLabel: UILabel!
     
     @IBOutlet weak var detailImageField: UIImageView!
-    
-    
+
     @IBOutlet weak var detailLabelField: UILabel!
     var safetyItem: SafetyDetail?
 
@@ -21,7 +20,6 @@ class ToDoDetailsController: UIViewController {
             super.viewDidLoad()
             showSafetyDetails()
         }
-
         func showSafetyDetails() {
             guard let safetyItem = safetyItem else { return }
             
@@ -35,9 +33,6 @@ class ToDoDetailsController: UIViewController {
         }
     }
     
-
-//Details 
-
     
 
 
