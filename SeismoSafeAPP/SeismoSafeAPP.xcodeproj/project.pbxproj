@@ -11,12 +11,14 @@
 		A61034832BB30A65001BA84F /* EarthquakeFeatureAdapter .swift in Sources */ = {isa = PBXBuildFile; fileRef = A61034822BB30A65001BA84F /* EarthquakeFeatureAdapter .swift */; };
 		A61034852BB462B6001BA84F /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61034842BB462B6001BA84F /* SettingCell.swift */; };
 		A61034872BB463B1001BA84F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61034862BB463B1001BA84F /* SettingsController.swift */; };
+		A617A6C42BBB5B88009B194F /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A617A6C32BBB5B88009B194F /* SettingsCoordinator.swift */; };
+		A617A6C72BC519F6009B194F /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = A617A6C62BC519F6009B194F /* FloatingPanel */; };
 		A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */; };
 		A65B636B2B684AA8007B47F1 /* ToDoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */; };
 		A65B636C2B684AA8007B47F1 /* ToDoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A65B636A2B684AA8007B47F1 /* ToDoCollectionViewCell.xib */; };
 		A65B63702B6991EA007B47F1 /* todolist.json in Resources */ = {isa = PBXBuildFile; fileRef = A65B636F2B6991EA007B47F1 /* todolist.json */; };
 		A65B63722B699A39007B47F1 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63712B699A39007B47F1 /* ToDoModel.swift */; };
-		A65B63742B699AE3007B47F1 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63732B699AE3007B47F1 /* ToDoViewModel.swift */; };
+		A65B63742B699AE3007B47F1 /* ParseJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63732B699AE3007B47F1 /* ParseJsonData.swift */; };
 		A65B63762B69A4D3007B47F1 /* ToDoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B63752B69A4D3007B47F1 /* ToDoDetailsController.swift */; };
 		A668050C2B5450B4005DA015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050B2B5450B4005DA015 /* AppDelegate.swift */; };
 		A668050E2B5450B4005DA015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A668050D2B5450B4005DA015 /* SceneDelegate.swift */; };
@@ -44,12 +46,13 @@
 		A61034822BB30A65001BA84F /* EarthquakeFeatureAdapter .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EarthquakeFeatureAdapter .swift"; sourceTree = "<group>"; };
 		A61034842BB462B6001BA84F /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		A61034862BB463B1001BA84F /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		A617A6C32BBB5B88009B194F /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		A65B63652B67C31F007B47F1 /* MagnitudeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnitudeCell.swift; sourceTree = "<group>"; };
 		A65B63692B684AA8007B47F1 /* ToDoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A65B636A2B684AA8007B47F1 /* ToDoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCollectionViewCell.xib; sourceTree = "<group>"; };
 		A65B636F2B6991EA007B47F1 /* todolist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todolist.json; sourceTree = "<group>"; };
 		A65B63712B699A39007B47F1 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
-		A65B63732B699AE3007B47F1 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
+		A65B63732B699AE3007B47F1 /* ParseJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJsonData.swift; sourceTree = "<group>"; };
 		A65B63752B69A4D3007B47F1 /* ToDoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailsController.swift; sourceTree = "<group>"; };
 		A66805082B5450B4005DA015 /* SeismoSafeAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeismoSafeAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A668050B2B5450B4005DA015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A617A6C72BC519F6009B194F /* FloatingPanel in Frameworks */,
 				A66805282B55A8C8005DA015 /* MapKit.framework in Frameworks */,
 				A668052D2B55AEC3005DA015 /* Alamofire in Frameworks */,
 			);
@@ -104,7 +108,7 @@
 				A65B636A2B684AA8007B47F1 /* ToDoCollectionViewCell.xib */,
 				A65B636F2B6991EA007B47F1 /* todolist.json */,
 				A65B63712B699A39007B47F1 /* ToDoModel.swift */,
-				A65B63732B699AE3007B47F1 /* ToDoViewModel.swift */,
+				A65B63732B699AE3007B47F1 /* ParseJsonData.swift */,
 				A65B63752B69A4D3007B47F1 /* ToDoDetailsController.swift */,
 			);
 			path = ToDoPage;
@@ -113,6 +117,7 @@
 		A66804FF2B5450B4005DA015 = {
 			isa = PBXGroup;
 			children = (
+				A617A6C32BBB5B88009B194F /* SettingsCoordinator.swift */,
 				A61034862BB463B1001BA84F /* SettingsController.swift */,
 				A61034842BB462B6001BA84F /* SettingCell.swift */,
 				A66805092B5450B4005DA015 /* Products */,
@@ -181,6 +186,7 @@
 			name = SeismoSafeAPP;
 			packageProductDependencies = (
 				A668052C2B55AEC3005DA015 /* Alamofire */,
+				A617A6C62BC519F6009B194F /* FloatingPanel */,
 			);
 			productName = SeismoSafeAPP;
 			productReference = A66805082B5450B4005DA015 /* SeismoSafeAPP.app */;
@@ -212,6 +218,7 @@
 			mainGroup = A66804FF2B5450B4005DA015;
 			packageReferences = (
 				A668052B2B55AEC3005DA015 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A617A6C52BC519F6009B194F /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 			);
 			productRefGroup = A66805092B5450B4005DA015 /* Products */;
 			projectDirPath = "";
@@ -242,7 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65B63742B699AE3007B47F1 /* ToDoViewModel.swift in Sources */,
+				A65B63742B699AE3007B47F1 /* ParseJsonData.swift in Sources */,
+				A617A6C42BBB5B88009B194F /* SettingsCoordinator.swift in Sources */,
 				A65B63662B67C31F007B47F1 /* MagnitudeCell.swift in Sources */,
 				A65B63722B699A39007B47F1 /* ToDoModel.swift in Sources */,
 				A610347F2B90E0E1001BA84F /* BottomSheetViewController.swift in Sources */,
@@ -491,6 +499,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A617A6C52BC519F6009B194F /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
 		A668052B2B55AEC3005DA015 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -502,6 +518,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A617A6C62BC519F6009B194F /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A617A6C52BC519F6009B194F /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
 		A668052C2B55AEC3005DA015 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A668052B2B55AEC3005DA015 /* XCRemoteSwiftPackageReference "Alamofire" */;

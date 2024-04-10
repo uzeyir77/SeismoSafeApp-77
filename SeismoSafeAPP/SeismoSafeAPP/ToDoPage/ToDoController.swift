@@ -11,7 +11,7 @@ import ContactsUI
 class ToDoController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let viewModel = ToDoViewModel()
+    let viewModel = ParseJsonData()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ToDoViewModel {
+class ParseJsonData {
     var safetyData: EarthquakeSafety?
     
     func parseJsonFile() {
